@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurkenBot - AIGuide</title>
+    
+    <link rel="icon" type="image/png" href="logo-surkenbot.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="layout">
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="logo-surkenbot.png" alt="Logo SurkenBot" class="logo">
+                    <div class="brand-name">
+                        <h2>SurkenBot</h2>
+                        <span class="ai-badge">AI Guide</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-category">Eksplorasi</div>
+                <div class="menu-item" data-target="view-tentang" data-title="Tentang Suryakencana">
+                    <span class="material-icons-outlined">info</span>
+                    Tentang Suryakencana
+                </div>
+                <div class="menu-item" data-target="view-map" data-title="Peta Suryakencana">
+                    <span class="material-icons-outlined">map</span>
+                    Peta Suryakencana
+                </div>
+                <div class="menu-item" data-target="view-top" data-title="Top Kuliner Suryakencana">
+                    <span class="material-icons-outlined">star</span>
+                    Top Kuliner Suryakencana
+                </div>
+                
+                <div class="menu-category" style="margin-top: 20px;">Interaksi</div>
+                <div class="menu-item active" data-target="view-chat" data-title="Obrolan SurkenBot">
+                    <span class="material-icons-outlined">chat</span>
+                    Obrolan SurkenBot
+                </div>
+                
+                <button id="clearBtn" class="sidebar-btn">
+                    <span class="material-icons-outlined">delete</span>
+                    Bersihkan Obrolan
+                </button>
+            </nav>
+        </aside>
+
+        <main id="app">
+            <header>
+                <h2 id="headerTitle">SurkenBot</h2>
+                
+                <div class="header-right">
+                    <div class="button-container">
+                        <button id="themeToggle" data-tooltip="Ganti Tema">
+                            <span class="material-icons-outlined">dark_mode</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="view-chat" class="view active">
+                <div id="chatBox"></div>
+                
+                <div class="typing-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                
+                <button id="scrollToBottomBtn" class="scroll-btn">
+                    <span class="material-icons-outlined">expand_more</span>
+                </button>
+                
+                <div id="inputArea">
+                    <div class="input-wrapper">
+                        <textarea id="userInput" placeholder="Tanya kuliner Surken..." rows="1"></textarea>
+                        <button id="sendBtn" class="send-icon">
+                            <span id="icon-send" class="material-icons-outlined">send</span>
+                            <span id="icon-stop" class="material-icons-outlined" style="display:none;">stop_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-tentang" class="view">
+                <div class="gallery-container">
+                    <img src="Suryakencana1.jpeg" class="gallery-img">
+                    <img src="Suryakencana2.jpeg" class="gallery-img">
+                    <img src="Suryakencana3.jpeg" class="gallery-img">
+                </div>
+
+                <p>Surya Kencana merupakan salah satu kawasan paling bersejarah sekaligus pusat kuliner yang paling dikenal di Kota Bogor, Jawa Barat. Terletak di Kecamatan Bogor Tengah, Jalan Surya Kencana telah menjadi bagian penting dari perkembangan Kota Bogor selama ratusan tahun. Kawasan ini tidak hanya dikenal sebagai destinasi wisata kuliner, tetapi juga sebagai pusat perdagangan, budaya, dan sejarah yang masih mempertahankan identitasnya hingga saat ini.</p>
+                <p>Secara historis, kawasan Surya Kencana merupakan bagian dari kawasan Pecinan Bogor yang telah berkembang sejak masa kolonial Belanda. Pada masa itu, kawasan ini menjadi pusat aktivitas ekonomi masyarakat, khususnya komunitas Tionghoa yang berperan penting dalam perkembangan perdagangan di Kota Bogor. Seiring berjalannya waktu, kawasan ini terus berkembang tanpa meninggalkan karakter budaya dan sejarahnya.</p>
+                <p>Keunikan Surya Kencana terletak pada perpaduan budaya yang tercermin dalam kehidupan masyarakatnya. Berbagai tradisi dari budaya Sunda, Tionghoa, dan budaya Nusantara lainnya hidup berdampingan secara harmonis. Hal tersebut dapat dilihat dari keberadaan rumah ibadah, bangunan berarsitektur khas Tionghoa dan kolonial, pasar tradisional, serta beragam jenis usaha yang masih mempertahankan ciri khasnya.</p>
+                <p>Salah satu daya tarik utama Surya Kencana adalah kekayaan kulinernya. Kawasan ini dikenal sebagai surga kuliner karena menawarkan berbagai pilihan makanan yang sangat beragam, mulai dari makanan khas Bogor, masakan Tionghoa, hidangan Nusantara, makanan tradisional, hingga kuliner modern. Pengunjung dapat menemukan berbagai makanan legendaris yang telah bertahan selama puluhan tahun dengan cita rasa yang tetap terjaga.</p>
+                <p>Lokasi Surya Kencana yang berada di pusat Kota Bogor membuat kawasan ini sangat mudah dijangkau. Kawasan ini berada tidak jauh dari berbagai destinasi wisata terkenal seperti Kebun Raya Bogor, Istana Bogor, Pasar Bogor, dan Alun-Alun Kota Bogor. Letaknya yang strategis menjadikan Surya Kencana sering menjadi tujuan utama wisatawan setelah mengunjungi objek wisata di sekitarnya.</p>
+                <p>Dengan kekayaan sejarah, keberagaman budaya, kelezatan kuliner, lokasi yang strategis, serta suasana yang khas, Surya Kencana tidak hanya menjadi pusat kuliner semata, tetapi juga menjadi representasi dari perjalanan sejarah dan perkembangan Kota Bogor. Kawasan ini berhasil mempertahankan nilai-nilai tradisional di tengah perkembangan zaman, sehingga tetap menjadi salah satu destinasi wisata yang memiliki daya tarik tinggi.</p>
+            </div>
+
+            <div id="view-map" class="view">
+                <div id="mapContainer">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3857322967664!2d106.79529367499427!3d-6.598501193403333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5c4e78820f1%3A0x6734c5680d2d3a33!2sJl.%20Suryakencana%2C%20Bogor%20Tengah%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1716382948192!5m2!1sid!2sid" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p style="margin-top: 15px; color: #666;">Klik peta di atas untuk melihat rute langsung ke kawasan kuliner Suryakencana melalui Google Maps.</p>
+            </div>
+
+            <div id="view-top" class="view">
+                <p>Kawasan Surya Kencana dikenal sebagai pusat wisata kuliner legendaris di Kota Bogor. Berbagai makanan khas Bogor, kuliner tradisional, hingga hidangan khas Tionghoa dapat ditemukan di sepanjang jalan ini. Sebagian besar tempat makan telah berdiri selama puluhan tahun dan tetap mempertahankan cita rasa autentiknya. Berikut beberapa kuliner yang paling populer dan banyak direkomendasikan ketika berkunjung ke Surya Kencana.</p>
+                
+                <div class="kuliner-list" style="margin-top: 20px;">
+                    <h3>1. Soto Kuning Pak Yusup</h3>
+                    <p>Ciri khasnya terletak pada kuah santan berwarna kuning yang kaya akan rempah-rempah. Pilihan daging sapi meliputi daging, kikil, babat, paru, usus, hingga otak.</p>
+                    <p><strong>Menu andalan :</strong> Soto Kuning Daging Sapi | <strong>Harga :</strong> Rp35rb–Rp50rb | <strong>Jam :</strong> 08.00–17.00 WIB</p>
+
+                    <h3>2. Lumpia Basah Surya Kencana</h3>
+                    <p>Jajanan khas Bogor dengan rasa manis, gurih, dan sedikit pedas. Berisi rebung segar, bengkuang, telur, tahu, tauge, dan bumbu khas dalam kulit lumpia lembut.</p>
+                    <p><strong>Menu andalan :</strong> Lumpia Basah Original | <strong>Harga :</strong> Rp15rb–Rp25rb | <strong>Jam :</strong> 10.00–21.00 WIB</p>
+
+                    <h3>3. Ngo Hiang Gang Aut</h3>
+                    <p>Kuliner legendaris Tionghoa berupa campuran daging berbumbu yang dibungkus kulit tahu, digoreng renyah, disajikan dengan acar dan saus khas.</p>
+                    <p><strong>Menu andalan :</strong> Ngo Hiang Komplit | <strong>Harga :</strong> Rp30rb–Rp60rb | <strong>Jam :</strong> 09.00–17.00 WIB</p>
+
+                    <h3>4. Laksa Bogor Pak Inin</h3>
+                    <p>Kuah santan kental dengan rempah pilihan, berisi ketupat, bihun, tauge, tahu kuning, telur rebus, dan oncom.</p>
+                    <p><strong>Menu andalan :</strong> Laksa Bogor Original | <strong>Harga :</strong> Rp20rb–Rp35rb | <strong>Jam :</strong> 09.00–16.00 WIB</p>
+
+                    <h3>5. Toge Goreng Pak Gebro</h3>
+                    <p>Hidangan tauge segar, mie kuning, tahu, dan lontong yang disiram kuah tauco dan oncom yang gurih, manis, dan sedikit asam.</p>
+                    <p><strong>Menu andalan :</strong> Toge Goreng Komplit | <strong>Harga :</strong> Rp15rb–Rp25rb | <strong>Jam :</strong> 09.00–17.00 WIB</p>
+
+                    <h3>6. Asinan Jagung Bakar Asli Gang Aut</h3>
+                    <p>Perpaduan rasa segar, manis, asam, dan pedas. Tersedia asinan buah/sayur dan jagung bakar yang populer.</p>
+                    <p><strong>Menu andalan :</strong> Asinan Buah, Sayur, Jagung Bakar | <strong>Harga :</strong> Rp20rb–Rp35rb | <strong>Jam :</strong> 09.00–20.00 WIB</p>
+
+                    <h3>7. Martabak Air Mancur</h3>
+                    <p>Martabak legendaris dengan ukuran besar, adonan lembut, dan topping melimpah.</p>
+                    <p><strong>Menu andalan :</strong> Martabak Manis Cokelat Keju, Martabak Telur Spesial | <strong>Harga :</strong> Rp40rb–Rp80rb | <strong>Jam :</strong> 15.00–22.00 WIB</p>
+
+                    <h3>8. Cungkring Pak Jumat</h3>
+                    <p>Kikil, kulit, dan bagian kepala sapi yang direbus empuk, disajikan dengan lontong, tempe goreng, dan bumbu kacang.</p>
+                    <p><strong>Menu andalan :</strong> Cungkring Komplit | <strong>Harga :</strong> Rp20rb–Rp35rb | <strong>Jam :</strong> 07.00–14.00 WIB</p>
+
+                    <h3>9. Doclang Bogor</h3>
+                    <p>Kuliner tradisional dari lontong, kentang rebus, tahu goreng, dan telur dengan siraman bumbu kacang dan kecap manis.</p>
+                    <p><strong>Menu andalan :</strong> Doclang Original | <strong>Harga :</strong> Rp15rb–Rp25rb | <strong>Jam :</strong> 07.00–15.00 WIB</p>
+
+                    <h3>10. Es Pala Bogor</h3>
+                    <p>Minuman segar dari buah pala yang diolah menjadi manisan, disajikan dengan es batu dan sirup.</p>
+                    <p><strong>Menu andalan :</strong> Es Pala Original | <strong>Harga :</strong> Rp10rb–Rp20rb</p>
+                </div>
+
+                <h3 style="margin-top: 30px;">Mengapa Kuliner Surya Kencana Istimewa?</h3>
+                <p>Surya Kencana bukan sekadar tempat makan, melainkan pusat sejarah kuliner. Sebagian besar tempat makan di sini telah beroperasi puluhan tahun dengan resep asli lintas generasi. Perpaduan budaya Sunda, Tionghoa, dan Nusantara menciptakan pengalaman yang unik dan autentik di pusat Kota Bogor.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
